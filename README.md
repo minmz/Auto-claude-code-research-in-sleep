@@ -2,9 +2,9 @@
 
 [中文版 README](README_CN.md) | English
 
-![Hero](hero_combined.svg)
+![Hero](docs/hero_combined.svg)
 
-![Score Progression](auto_review_score_curve.png)
+![Score Progression](docs/auto_review_score_curve.png)
 
 > 🌙 **Let Claude Code do research while you sleep.** Wake up to find your paper scored, weaknesses identified, experiments run, and narrative rewritten — autonomously.
 
@@ -275,7 +275,7 @@ Skills are plain Markdown files. Fork and customize:
 
 Join the WeChat group for discussion on Claude Code + AI-driven research workflows:
 
-<img src="wechat_group.jpg" alt="WeChat Group QR Code" width="300">
+<img src="docs/wechat_group.jpg" alt="WeChat Group QR Code" width="300">
 
 ## ⭐ Star History
 

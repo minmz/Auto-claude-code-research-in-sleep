@@ -2,9 +2,9 @@
 
 [English](README.md) | 中文版
 
-![Hero](hero_combined.svg)
+![Hero](docs/hero_combined.svg)
 
-![分数曲线](auto_review_score_curve.png)
+![分数曲线](docs/auto_review_score_curve.png)
 
 > 🌙 **让 Claude Code 在你睡觉时做科研。** 醒来发现论文已被打分、弱点已被定位、实验已跑完、叙事已重写——全自动。
 
@@ -201,7 +201,7 @@ Skills 就是普通的 Markdown 文件，fork 后随意改：
 
 欢迎加入微信群，交流 Claude Code + AI 科研工作流：
 
-<img src="wechat_group.jpg" alt="微信交流群二维码" width="300">
+<img src="docs/wechat_group.jpg" alt="微信交流群二维码" width="300">
 
 ## ⭐ Star History
 
