@@ -689,6 +689,36 @@ Join the WeChat group for discussion on Claude Code + AI-driven research workflo
 
 [![Star History Chart](https://api.star-history.com/svg?repos=wanshuiyin/Auto-claude-code-research-in-sleep&type=Date&v=20260312&r=2)](https://star-history.com/#wanshuiyin/Auto-claude-code-research-in-sleep&Date)
 
+## 🙏 Acknowledgements
+
+This project builds on and integrates with many excellent open-source projects:
+
+**Core Infrastructure**
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) — Anthropic's CLI for Claude, the execution backbone
+- [Codex CLI](https://github.com/openai/codex) — OpenAI's CLI, used as MCP server for cross-model review
+
+**Zotero Integration**
+- [zotero-mcp](https://github.com/54yyyu/zotero-mcp) — Zotero MCP server with semantic search and PDF annotations
+- [Zotero](https://www.zotero.org/) — Open-source reference manager
+
+**Obsidian Integration**
+- [mcpvault](https://github.com/bitbonsai/mcpvault) — Obsidian vault MCP server (no app required)
+- [obsidian-skills](https://github.com/kepano/obsidian-skills) — Claude Code skills for Obsidian Markdown by Steph Ango (Obsidian CEO)
+
+**Paper Writing Inspiration**
+- [claude-scholar](https://github.com/Galaxy-Dawn/claude-scholar) — Academic paper writing with Claude
+- [Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills) — Paper writing skill templates
+- [baoyu-skills](https://github.com/jimliu/baoyu-skills) — Claude Code skills collection
+
+**Feishu/Lark (Planned)**
+- [feishu-claude-code](https://github.com/joewongjc/feishu-claude-code) — Bidirectional Feishu ↔ Claude Code bridge
+- [clawdbot-feishu](https://github.com/m1heng/clawdbot-feishu) — Feishu bot for Claude
+- [cc-connect](https://github.com/chenhg5/cc-connect) — Multi-platform messaging bridge
+- [lark-openapi-mcp](https://github.com/larksuite/lark-openapi-mcp) — Official Lark MCP server
+
+**Community**
+- [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) — Curated list of Claude Code skills (featured)
+
 ## License
 
 MIT

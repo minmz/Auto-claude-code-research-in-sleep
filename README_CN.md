@@ -605,6 +605,36 @@ claude
 
 [![Star History Chart](https://api.star-history.com/svg?repos=wanshuiyin/Auto-claude-code-research-in-sleep&type=Date&v=20260312&r=2)](https://star-history.com/#wanshuiyin/Auto-claude-code-research-in-sleep&Date)
 
+## 🙏 致谢
+
+本项目构建于并集成了许多优秀的开源项目：
+
+**核心基础设施**
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) — Anthropic 的 Claude CLI，执行层骨干
+- [Codex CLI](https://github.com/openai/codex) — OpenAI 的 CLI，作为 MCP server 实现跨模型审稿
+
+**Zotero 集成**
+- [zotero-mcp](https://github.com/54yyyu/zotero-mcp) — Zotero MCP server，语义搜索 + PDF 标注
+- [Zotero](https://www.zotero.org/) — 开源文献管理器
+
+**Obsidian 集成**
+- [mcpvault](https://github.com/bitbonsai/mcpvault) — Obsidian vault MCP server（不需要打开 Obsidian）
+- [obsidian-skills](https://github.com/kepano/obsidian-skills) — Obsidian CEO Steph Ango 维护的 Claude Code skills
+
+**论文写作灵感来源**
+- [claude-scholar](https://github.com/Galaxy-Dawn/claude-scholar) — 用 Claude 写学术论文
+- [Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills) — 论文写作 skill 模板
+- [baoyu-skills](https://github.com/jimliu/baoyu-skills) — Claude Code skills 合集
+
+**飞书集成（计划中）**
+- [feishu-claude-code](https://github.com/joewongjc/feishu-claude-code) — 飞书 ↔ Claude Code 双向桥接
+- [clawdbot-feishu](https://github.com/m1heng/clawdbot-feishu) — 飞书 Claude 机器人
+- [cc-connect](https://github.com/chenhg5/cc-connect) — 多平台消息桥接
+- [lark-openapi-mcp](https://github.com/larksuite/lark-openapi-mcp) — 飞书官方 MCP server
+
+**社区**
+- [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) — Claude Code skills 精选列表（已收录）
+
 ## License
 
 MIT
