@@ -24,6 +24,7 @@
 
 ## 📢 最近更新
 
+- **2026-03-16** — ![NEW](https://img.shields.io/badge/NEW-red?style=flat-square) 🇨🇳 **[阿里百炼 Coding Plan 接入指南](docs/ALI_CODING_PLAN_GUIDE.md)** — 一个 API Key、4 款模型（Kimi-K2.5 + Qwen3.5+ + GLM-5 + MiniMax-M2.5），双端点配置。社区贡献 by [@tianhao909](https://github.com/tianhao909)
 - **2026-03-15** — ![NEW](https://img.shields.io/badge/NEW-red?style=flat-square) 🔀 **自带模型！** [任意 OpenAI 兼容 API](#-替代模型组合) 均可作为审查器，通过 [`llm-chat`](mcp-servers/llm-chat/) MCP 服务器。GLM、MiniMax、Kimi、LongCat、DeepSeek 已全部测试——**完全不需要 Claude 或 OpenAI API**
 - **2026-03-15** — ![NEW](https://img.shields.io/badge/NEW-red?style=flat-square) 🐾 **[OpenClaw 适配指南](docs/OPENCLAW_ADAPTATION.md)** — 无需 Claude Code slash skills，在 [OpenClaw](https://github.com/All-Hands-AI/OpenHands) 中使用 ARIS 科研工作流
 - **2026-03-15** — ![NEW](https://img.shields.io/badge/NEW-red?style=flat-square) 📐 **[`proof-writer`](skills/proof-writer/SKILL.md)** — 社区 skill，严格定理证明撰写。📚 **反幻觉引用** — `/paper-write` 现从 [DBLP](https://dblp.org)/[CrossRef](https://www.crossref.org) 获取真实 BibTeX，替代 LLM 生成——默认开启，零安装
@@ -800,8 +801,9 @@ Skills 就是普通的 Markdown 文件，fork 后随意改：
 | **方案 A** | GLM-5（Z.ai） | GPT-5.4（Codex MCP） | 否 | 是 | [配置见下](#方案-a-glm--gpt) |
 | **方案 B** | GLM-5（Z.ai） | MiniMax-M2.5 | 否 | 否 | [MINIMAX_MCP_GUIDE](docs/MINIMAX_MCP_GUIDE.md) |
 | **方案 C** | 任意 CC 兼容 | 任意 OpenAI 兼容 | 否 | 否 | [LLM_API_MIX_MATCH_GUIDE](docs/LLM_API_MIX_MATCH_GUIDE.md) |
+| **方案 D** | Kimi-K2.5 / Qwen3.5+ | GLM-5 / MiniMax-M2.5 | 否 | 否 | [ALI_CODING_PLAN_GUIDE](docs/ALI_CODING_PLAN_GUIDE.md) |
 
-**方案 C** 已适配的提供商：GLM（Z.ai）、Kimi（Moonshot）、LongCat（美团）作为执行器；DeepSeek、MiniMax 作为审查器。任何 OpenAI 兼容 API 理论上均可通过通用 [`llm-chat`](mcp-servers/llm-chat/) MCP 服务器接入。
+**方案 C** 已适配的提供商：GLM（Z.ai）、Kimi（Moonshot）、LongCat（美团）作为执行器；DeepSeek、MiniMax 作为审查器。任何 OpenAI 兼容 API 理论上均可通过通用 [`llm-chat`](mcp-servers/llm-chat/) MCP 服务器接入。**方案 D** 使用[阿里百炼 Coding Plan](https://bailian.console.aliyun.com/)——一个 API Key 包含 4 款模型（Kimi、Qwen、GLM、MiniMax），双端点配置。
 
 ### 方案 A: GLM + GPT
 
