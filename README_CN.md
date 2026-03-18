@@ -533,6 +533,17 @@ cp -r skills/research-lit ~/.claude/skills/
 
 Claude Code 读到这些就知道怎么 SSH、激活环境、启动实验。GPT-5.4（审稿人）只决定**做什么实验**——Claude Code 根据你的 `CLAUDE.md` 搞定**怎么跑**。
 
+如果你已经在 GPU 服务器上，可以添加以下到你的 `CLAUDE.md`：
+```markdown
+## GPU 环境
+
+- 这台机器有直接 GPU 访问（不需要 SSH）
+- GPU：4x A100 80GB
+- 实验环境：`YOUR_CONDA_ENV`（Python 3.x + PyTorch）
+- 激活前任何 Python 命令：`激活实验环境的命令`（uv, conda 等）
+- 代码目录：`/home/YOUR_USERNAME/YOUR_CODE_DIRECTORY/`
+```
+
 **没有 GPU 服务器？** Review 和改写功能不受影响，只有需要跑实验的修复会被跳过（标记为"需人工跟进"）。
 
 </details>
