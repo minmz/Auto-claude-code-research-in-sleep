@@ -563,23 +563,26 @@ NARRATIVE_REPORT.md ──► /paper-plan ──► /paper-figure ──► /pap
 
 与工作流 1–4 优化*研究产物*（论文、代码、实验）不同，工作流 M 优化的是 *harness 本身*——SKILL.md 指令、默认参数和收敛规则。灵感来自 [Meta-Harness](https://arxiv.org/abs/2603.28052)（Lee et al., 2026）。
 
-**设置（一次性）：**
+**设置（一次性，在普通终端）：**
 ```bash
-# 启用被动事件日志（通过 Claude Code hooks）
-cp templates/claude-hooks/meta_logging.json .claude/settings.json
-# 或将 "hooks" 部分合并到现有的 .claude/settings.json 中
+mkdir -p .claude .aris/meta tools/meta_opt
+cp Auto-claude-code-research-in-sleep/templates/claude-hooks/meta_logging.json .claude/settings.json
+cp Auto-claude-code-research-in-sleep/tools/meta_opt/*.sh tools/meta_opt/
+chmod +x tools/meta_opt/*.sh
+claude   # hooks 立即生效
 ```
 
 **使用（累积 5 次以上工作流运行后）：**
 ```
-> /meta-optimize                        # 分析所有技能
+> /meta-optimize                        # 分析当前项目
 > /meta-optimize "auto-review-loop"     # 聚焦单个技能
+> /meta-optimize --global               # 分析跨项目的使用趋势
 > /meta-optimize apply 1                # 应用推荐的修改 #1
 ```
 
 **工作原理：**
 
-1. 📊 **被动记录** — hooks 静默记录每次技能调用、工具执行、失败、参数覆盖到 `.aris/meta/events.jsonl`
+1. 📊 **被动记录** — hooks 静默记录每次技能调用、工具执行、失败、参数覆盖。事件同时写入**项目级**（`.aris/meta/events.jsonl`）和**全局**（`~/.aris/meta/events.jsonl`，带 `"project"` 标签）两份日志
 2. 🔍 **模式分析** — 识别高频覆盖参数（默认值不好）、重复失败（缺少错误处理）、分数停滞（收敛规则需调整）
 3. 🩹 **生成 Patch** — 对目标 SKILL.md 生成最小修改 + 数据支撑的理由
 4. 🔬 **Reviewer 审核** — GPT-5.4 xhigh 评估每个 patch 是否安全

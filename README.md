@@ -727,23 +727,26 @@ Got reviews back? `/rebuttal` parses them, builds a strategy, and drafts a venue
 
 Unlike Workflows 1–4 which optimize *research artifacts* (papers, code, experiments), Workflow M optimizes the *harness itself* — the SKILL.md instructions, default parameters, and convergence rules that govern how ARIS operates. Inspired by [Meta-Harness](https://arxiv.org/abs/2603.28052) (Lee et al., 2026).
 
-**Setup (one-time):**
+**Setup (one-time, in normal terminal):**
 ```bash
-# Enable passive event logging via Claude Code hooks
-cp templates/claude-hooks/meta_logging.json .claude/settings.json
-# Or merge the "hooks" section into your existing .claude/settings.json
+mkdir -p .claude .aris/meta tools/meta_opt
+cp Auto-claude-code-research-in-sleep/templates/claude-hooks/meta_logging.json .claude/settings.json
+cp Auto-claude-code-research-in-sleep/tools/meta_opt/*.sh tools/meta_opt/
+chmod +x tools/meta_opt/*.sh
+claude   # hooks active immediately
 ```
 
 **Usage (after 5+ workflow runs):**
 ```
-> /meta-optimize                        # analyze all skills
+> /meta-optimize                        # analyze current project
 > /meta-optimize "auto-review-loop"     # focus on one skill
+> /meta-optimize --global               # analyze trends across ALL projects
 > /meta-optimize apply 1                # apply recommended change #1
 ```
 
 **How it works:**
 
-1. 📊 **Passive logging** — Claude Code hooks silently record every skill invocation, tool call, failure, parameter override, and user prompt to `.aris/meta/events.jsonl`. Zero user effort.
+1. 📊 **Passive logging** — Claude Code hooks silently record every skill invocation, tool call, failure, parameter override, and user prompt. Events are written to **both** project-level (`.aris/meta/events.jsonl`) and global (`~/.aris/meta/events.jsonl`, with a `"project"` tag) logs. Zero user effort.
 2. 🔍 **Pattern analysis** — `/meta-optimize` reads the log and identifies:
    - Parameters users override most often (bad defaults)
    - Tools that fail repeatedly in specific skills (missing error handling)
